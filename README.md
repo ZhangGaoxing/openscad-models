@@ -12,3 +12,4 @@ Models in this repository are licensed under the [__Creative Commons - Attributi
 * Commercial use is allowed.
 
 ## Catalogue
+* Bottle Cap [BottleCap](https://github.com/ZhangGaoxing/openscad-models/tree/master/BottleCap)
