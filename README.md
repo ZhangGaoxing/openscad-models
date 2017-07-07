@@ -5,7 +5,8 @@ Models are built using OpenSCAD.
 
 ## Licensed
 Models in this repository are licensed under the [__Creative Commons - Attribution - -ShareAlike 3.0 Unported__](https://creativecommons.org/licenses/by-sa/3.0/deed.en) license.
-#### What does this mean?
+
+__What does this mean?__
 * You must attribute (give credit) to the creator of this Thing.
 * You must distribute Remixes under the same license as the original.
 * Remixing or Changing this Thing is allowed.
