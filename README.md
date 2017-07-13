@@ -15,3 +15,4 @@ __What does this mean?__
 ## Catalogue
 * Bottle Cap [BottleCap](https://github.com/ZhangGaoxing/openscad-models/tree/master/BottleCap)
 * Sprinkle [Sprinkle](https://github.com/ZhangGaoxing/openscad-models/tree/master/Sprinkle)
+* PhotoFrame [PhotoFrame](https://github.com/ZhangGaoxing/openscad-models/tree/master/PhotoFrame)
