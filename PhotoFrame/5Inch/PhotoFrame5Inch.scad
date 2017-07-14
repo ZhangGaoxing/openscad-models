@@ -1,7 +1,7 @@
 module bottom(){
     difference(){
         cube([109,147,3]);
-        translate([7,7,2])cube([95,140,1]);
+        translate([8.5,8.5,2])cube([92,140,1]);
     }
 }
 
@@ -23,5 +23,5 @@ module frame(){
     translate([0,0,3])polyhedron(points,faces);
 }
 
-//frame();
-bottom();
+frame();
+//bottom();
