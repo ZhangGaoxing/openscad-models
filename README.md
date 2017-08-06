@@ -16,3 +16,4 @@ __What does this mean?__
 * Bottle Cap [BottleCap](https://github.com/ZhangGaoxing/openscad-models/tree/master/BottleCap)
 * Sprinkle [Sprinkle](https://github.com/ZhangGaoxing/openscad-models/tree/master/Sprinkle)
 * PhotoFrame [PhotoFrame](https://github.com/ZhangGaoxing/openscad-models/tree/master/PhotoFrame)
+* Emoji with Keychain Hole [EmojiWithKeychainHole](https://github.com/ZhangGaoxing/openscad-models/tree/master/EmojiWithKeychainHole)
