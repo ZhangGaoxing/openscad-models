@@ -18,3 +18,4 @@ __What does this mean?__
 * PhotoFrame [PhotoFrame](https://github.com/ZhangGaoxing/openscad-models/tree/master/PhotoFrame)
 * Emoji with Keychain Hole [EmojiWithKeychainHole](https://github.com/ZhangGaoxing/openscad-models/tree/master/EmojiWithKeychainHole)
 * Bird Water Feeder [BirdWaterFeeder](https://github.com/ZhangGaoxing/openscad-models/tree/master/BirdWaterFeeder)
+* Camera Box(Private Model) [CameraBox](https://github.com/ZhangGaoxing/openscad-models/tree/master/CameraBox)
