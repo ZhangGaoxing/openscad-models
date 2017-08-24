@@ -19,3 +19,4 @@ __What does this mean?__
 * Emoji with Keychain Hole [EmojiWithKeychainHole](https://github.com/ZhangGaoxing/openscad-models/tree/master/EmojiWithKeychainHole)
 * Bird Water Feeder [BirdWaterFeeder](https://github.com/ZhangGaoxing/openscad-models/tree/master/BirdWaterFeeder)
 * Camera Box(Private Model) [CameraBox](https://github.com/ZhangGaoxing/openscad-models/tree/master/CameraBox)
+* Chinese Chess [ChineseChess](https://github.com/ZhangGaoxing/openscad-models/tree/master/ChineseChess)
