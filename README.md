@@ -21,3 +21,4 @@ __What does this mean?__
 * Camera Box(Private Model) [CameraBox](https://github.com/ZhangGaoxing/openscad-models/tree/master/CameraBox)
 * Chinese Chess [ChineseChess](https://github.com/ZhangGaoxing/openscad-models/tree/master/ChineseChess)
 * Cat Footprint Stamp [CatFootprintStamp](https://github.com/ZhangGaoxing/openscad-models/tree/master/CatFootprintStamp)
+* BTCR-MINI Case [BTCR_MINI_Case](https://github.com/ZhangGaoxing/openscad-models/tree/master/BTCR_MINI_Case)
