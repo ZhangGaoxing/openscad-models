@@ -1,7 +1,16 @@
 $fn = 200;
 
+// raspberry pi
 //base_board(85, 56, 2.5, 1.5, 58, 49, 3.5, 3.5);
-rasp_top_board(2.5);
+//top_board(85, 56, 2.5, 1.5, 58, 49, 3.5, 3.5, 29.25, 32.5);
+
+// orange pi 4
+//base_board(91, 56, 2.5, 1.5, 84, 49, 3.5, 3.5);
+//top_board(91, 56, 2.5, 1.5, 84, 49, 3.5, 3.5, 29.25, 32.5);
+
+// orange pi 4
+base_board(69, 48, 2.5, 1.5, 62, 41, 3.5, 3.5);
+//top_board(69, 48, 2.5, 1.5, 62, 41, 3.5, 3.5, 29.25, 32.5);
 
 module base_board(x, y, z, r, x_apart, y_apart, x_offset, y_offset) {
     difference() {
@@ -18,6 +27,14 @@ module base_board(x, y, z, r, x_apart, y_apart, x_offset, y_offset) {
     }
 }
 
+module top_board(x, y, z, r, x_apart, y_apart, x_offset, y_offset, fan_x_offset, fan_y_offset) {
+    difference() {
+        base_board(x, y, z, r, x_apart, y_apart, x_offset, y_offset);
+        translate([fan_x_offset, fan_y_offset, 0])
+        cpu_fan(z);
+    }
+}
+
 module rasp_top_board(z) {
     difference() {
         base_board(85, 56, z, 1.5, 58, 49, 3.5, 3.5);
@@ -27,23 +44,27 @@ module rasp_top_board(z) {
         //translate([46.5, 3, 0])cube([1.5, 23, z]);
         // Display
         //translate([4, 16.5, 0])cube([1.5, 23, z]);
-        // CPU
+        // CPU fan
         translate([29.25, 32.5, 0])
-        difference() {
-            union() {
-                ring(5, z);
-                ring(7, z);
-                ring(9, z);
-                ring(11, z);
+        cpu_fan(z);
+    }
+}
+
+module cpu_fan(z) {
+    difference() {
+        union() {
+            ring(5, z);
+            ring(7, z);
+            ring(9, z);
+            ring(11, z);
                 
-                translate([-12, -12, 0])cylinder(h = z, r = 1.5);
-                translate([-12, 12, 0])cylinder(h = z, r = 1.5);
-                translate([12, -12, 0])cylinder(h = z, r = 1.5);
-                translate([12, 12, 0])cylinder(h = z, r = 1.5);
+            translate([-12, -12, 0])cylinder(h = z, r = 1.5);
+            translate([-12, 12, 0])cylinder(h = z, r = 1.5);
+            translate([12, -12, 0])cylinder(h = z, r = 1.5);
+            translate([12, 12, 0])cylinder(h = z, r = 1.5);
             }
-            translate([-11, -0.5, 0])cube([22, 1, z]);
-            rotate([0, 0, 90])translate([-11, -0.5, 0])cube([22, 1, z]);
-        }
+        translate([-11, -0.5, 0])cube([22, 1, z]);
+        rotate([0, 0, 90])translate([-11, -0.5, 0])cube([22, 1, z]);
     }
 }
 
