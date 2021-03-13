@@ -1,16 +1,16 @@
 $fn = 200;
 
 // raspberry pi
-//base_board(85, 56, 2.5, 1.5, 58, 49, 3.5, 3.5);
-//top_board(85, 56, 2.5, 1.5, 58, 49, 3.5, 3.5, 29.25, 32.5);
+//base_board(85, 56, 1.8, 2, 58, 49, 3.5, 3.5);
+//top_board(85, 56, 1.8, 2, 58, 49, 3.5, 3.5, 29.25, 32.5);
 
 // orange pi 4
-//base_board(91, 56, 2.5, 1.5, 84, 49, 3.5, 3.5);
-//top_board(91, 56, 2.5, 1.5, 84, 49, 3.5, 3.5, 29.25, 32.5);
+//base_board(91, 56, 1.8, 2, 85, 50.5, 3, 3);
+//top_board(91, 56, 1.8, 2, 85, 50.5, 3, 3, 38, 35);
 
-// orange pi 4
-base_board(69, 48, 2.5, 1.5, 62, 41, 3.5, 3.5);
-//top_board(69, 48, 2.5, 1.5, 62, 41, 3.5, 3.5, 29.25, 32.5);
+// orange pi lite
+//base_board(69, 48, 1.8, 2, 64, 43, 3, 3);
+//top_board(69, 48, 1.8, 2, 64, 43, 3, 3, 39, 31);
 
 module base_board(x, y, z, r, x_apart, y_apart, x_offset, y_offset) {
     difference() {
@@ -53,24 +53,23 @@ module rasp_top_board(z) {
 module cpu_fan(z) {
     difference() {
         union() {
-            ring(5, z);
-            ring(7, z);
+            ring(4, z);
             ring(9, z);
-            ring(11, z);
+            ring(14, z);
                 
-            translate([-12, -12, 0])cylinder(h = z, r = 1.5);
-            translate([-12, 12, 0])cylinder(h = z, r = 1.5);
-            translate([12, -12, 0])cylinder(h = z, r = 1.5);
-            translate([12, 12, 0])cylinder(h = z, r = 1.5);
-            }
-        translate([-11, -0.5, 0])cube([22, 1, z]);
-        rotate([0, 0, 90])translate([-11, -0.5, 0])cube([22, 1, z]);
+            translate([-12, -12, 0])cylinder(h = z, r = 2);
+            translate([-12, 12, 0])cylinder(h = z, r = 2);
+            translate([12, -12, 0])cylinder(h = z, r = 2);
+            translate([12, 12, 0])cylinder(h = z, r = 2);
+        }
+        translate([-14, -1.25, 0])cube([28, 2.5, z]);
+        rotate([0, 0, 90])translate([-14, -1.25, 0])cube([28, 2.5, z]);
     }
 }
 
 module ring(r, h){
     difference(){
         cylinder(h = h, r = r);
-        cylinder(h = h, r = r - 1);
+        cylinder(h = h, r = r - 2.5);
     }
 }
