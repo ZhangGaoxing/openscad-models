@@ -12,6 +12,10 @@ $fn = 200;
 //base_board(69, 48, 1.8, 2, 64, 43, 3, 3);
 //top_board(69, 48, 1.8, 2, 64, 43, 3, 3, 39, 31);
 
+// rock pi x
+//base_board(85, 56, 1.8, 2, 58, 49, 3.5, 3.5);
+//top_board(85, 56, 1.8, 2, 58, 49, 3.5, 3.5, 37, 26);
+
 module base_board(x, y, z, r, x_apart, y_apart, x_offset, y_offset) {
     difference() {
         minkowski() {
@@ -53,7 +57,6 @@ module rasp_top_board(z) {
 module cpu_fan(z) {
     difference() {
         union() {
-            ring(4, z);
             ring(9, z);
             ring(14, z);
                 
@@ -62,14 +65,14 @@ module cpu_fan(z) {
             translate([12, -12, 0])cylinder(h = z, r = 2);
             translate([12, 12, 0])cylinder(h = z, r = 2);
         }
-        translate([-14, -1.25, 0])cube([28, 2.5, z]);
-        rotate([0, 0, 90])translate([-14, -1.25, 0])cube([28, 2.5, z]);
+        translate([-14, -1, 0])cube([28, 2, z]);
+        rotate([0, 0, 90])translate([-14, -1, 0])cube([28, 2, z]);
     }
 }
 
 module ring(r, h){
     difference(){
         cylinder(h = h, r = r);
-        cylinder(h = h, r = r - 2.5);
+        cylinder(h = h, r = r - 3);
     }
 }
